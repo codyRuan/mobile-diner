@@ -1,0 +1,131 @@
+.map-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 120px); /* Subtract menu bar height */
+}
+
+.controls-container {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.search-bar-container {
+    flex: 2; /* Increase the flex value for the search bar */
+    margin-right: 20px; /* Increase the margin here */
+}
+
+.date-picker-container {
+    flex: 1; /* Decrease the flex value for the date picker */
+}
+
+.autosuggest__container {
+    position: relative;
+}
+
+.autosuggest__input {
+    width: 100%;
+    height: 30px; /* Reduce height */
+    padding: 5px; /* Reduce padding */
+    font-size: 14px; /* Reduce font size */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.autosuggest__suggestions-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    z-index: 2;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.autosuggest__suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.autosuggest__suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.autosuggest__suggestion--highlighted {
+    background-color: #ddd;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+}
+
+.suggestion-item img {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.date-picker .MuiTextField-root {
+    width: 100%;
+    height: 30px; /* Reduce height */
+    font-size: 14px; /* Reduce font size */
+}
+
+.date-picker .MuiInputBase-input {
+    height: 30px; /* Reduce height */
+    padding: 5px; /* Reduce padding */
+}
+
+.date-picker .MuiFormLabel-root {
+    font-size: 14px; /* Reduce font size */
+}
+
+.date-picker .MuiFormControl-root {
+    height: 30px; /* Reduce height */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .controls-container {
+        width: 90%;
+    }
+
+    .autosuggest__input {
+        font-size: 12px; /* Smaller font size on mobile */
+    }
+    
+    .autosuggest__suggestion {
+        padding: 8px; /* Adjust padding for mobile */
+    }
+
+    .date-picker .MuiTextField-root {
+        font-size: 12px; /* Smaller font size on mobile */
+    }
+    
+    .date-picker .MuiInputBase-input {
+        padding: 4px; /* Adjust padding for mobile */
+    }
+
+    .date-picker .MuiFormLabel-root {
+        font-size: 12px; /* Smaller font size on mobile */
+    }
+
+    .date-picker .MuiFormControl-root {
+        height: 28px; /* Adjust height for mobile */
+    }
+}
